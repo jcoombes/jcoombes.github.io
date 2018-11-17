@@ -1,6 +1,6 @@
-gallery = fetch("gallery2.json").then(function (response) {
+fetch("gallery2.json").then(function (response) {
 
-  response.json()
+  gallery = response.json()
 })
 
 function times_liked() {
