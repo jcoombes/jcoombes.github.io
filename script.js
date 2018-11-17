@@ -25,7 +25,7 @@ getJSON('gallery2.json',  function(err, data) {
         console.error(err);
     } else {
 
-        var text = `Date: ${data.date}
+        var text = `Date: ${data["images"]["guitar"]}
 Time: ${data.time}
 Unix time: ${data.milliseconds_since_epoch}`
 
