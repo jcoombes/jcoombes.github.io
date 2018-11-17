@@ -1,9 +1,4 @@
-gallery = fetch('http://jcoombes.github.io/gallery2.json')
-.then(res => res.json())
-.then((out) => {
-  console.log('Output: ', out);
-}).catch(err => console.error(err));
-
+gallery = fetch("gallery2.json");
 
 function times_liked() {
 
