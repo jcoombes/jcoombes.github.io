@@ -19,7 +19,7 @@ var getJSON = function(url, callback) {
     xhr.send();
 };
 
-getJSON('http://time.jsontest.com',  function(err, data) {
+getJSON('https://time.jsontest.com',  function(err, data) {
 
     if (err != null) {
         console.error(err);
