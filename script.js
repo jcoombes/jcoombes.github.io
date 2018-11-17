@@ -25,7 +25,7 @@ getJSON('gallery2.json',  function(err, data) {
         console.error(err);
     } else {
 
-        console.log(text);
+        console.log(data);
     }
 });
 
