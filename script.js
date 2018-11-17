@@ -1,4 +1,4 @@
-let gallery = fetch('http://www.jcoombes.github.io/gallery2.json')
+gallery = fetch('https://www.jcoombes.github.io/gallery2.json')
 .then(res => res.json())
 .then((out) => {
   console.log('Output: ', out);
