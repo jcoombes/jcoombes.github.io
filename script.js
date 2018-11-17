@@ -1,12 +1,36 @@
-fetch("gallery2.json").then(function (response) {
-  console.log("Maybe?");
-  gallery = response.json();
 
-}).then(function (jsonresponse) {
+var getJSON = function(url, callback) {
 
-  console.log("success?");
-  console.log("Output: " , jsonresponse);
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', url, true);
+    xhr.responseType = 'json';
 
+    xhr.onload = function() {
+
+        var status = xhr.status;
+
+        if (status == 200) {
+            callback(null, xhr.response);
+        } else {
+            callback(status);
+        }
+    };
+
+    xhr.send();
+};
+
+getJSON('http://time.jsontest.com',  function(err, data) {
+
+    if (err != null) {
+        console.error(err);
+    } else {
+
+        var text = `Date: ${data.date}
+Time: ${data.time}
+Unix time: ${data.milliseconds_since_epoch}`
+
+        console.log(text);
+    }
 });
 
 function times_liked() {
