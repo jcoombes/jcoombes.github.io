@@ -1,6 +1,11 @@
 fetch("gallery2.json").then(function (response) {
+  console.log("Maybe?");
+  gallery = response.json();
 
-  gallery = response.json()
+}).then(function (jsonresponse) {
+
+  console.log("success?");
+  console.log("Output: " , jsonresponse);
 
 });
 
