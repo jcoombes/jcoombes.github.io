@@ -87,6 +87,8 @@ function get_next_img(gallery, user_prefs,user_likes,user_dislikes) {
   seen = user_likes.concat(user_dislikes); //assuming user can't like and dislike simultaneaously
   for (var img in gallery) {
     if (seen.includes(img) === false) {
+      console.log("img",img);
+      console.log("image",gallery[img]);
 
     }
 
@@ -106,7 +108,6 @@ getJSON('gallery2.json',  function(err, data, main) {
     if (err != null) {
         console.error(err);
     } else {
-
         var gallery = data;
         // I have to put all my code inside this asynchronous block. :(
         main(gallery);
