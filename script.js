@@ -32,6 +32,8 @@ var looking = getJSON('gallery2.json',  function(err, data) {
     }
 });
 
+console.log(looking);
+
 function times_liked() {
 
 };
