@@ -26,7 +26,7 @@ var looking = getJSON('gallery2.json',  function(err, data, main) {
 
         var gallery = data;
         // I have to put all my code inside this asynchronous block. :(
-        main("hello");
+        main(gallery);
 
 
     }
@@ -35,11 +35,12 @@ var looking = getJSON('gallery2.json',  function(err, data, main) {
 console.log(looking);
 
 
-var main = function (foo) {
-  alert(foo);
+var main = function (gallery) {
+  times_liked(gallery);
 };
 
-function times_liked() {
+function times_liked(gallery) {
+  alert(2);
 
 };
 
