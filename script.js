@@ -32,9 +32,47 @@ function main(gallery) {
 };
 
 function times_liked(gallery, tag_list, user_likes, user_dislikes) {
+  //returns user preferences by tag as an object
+
+  var user_prefs = {
+    "african": 0,
+    "animal": 0,
+    "asian":0,
+    "big":0,
+    "blue":0,
+    "brown":0,
+    "dead":0,
+    "european":0,
+    "face":0,
+    "instrument":0,
+    "jar":0,
+    "leather":0,
+    "mouth":0,
+    "music":0,
+    "odd":0,
+    "shiny":0,
+    "statue":0,
+    "stone":0,
+    "tool":0,
+    "weapon":0,
+    "white":0,
+    "wood":0
+  }
 
   for (var tag in tag_list) {
     console.log(tag_list[tag]);
+
+    for (var like in user_likes) {
+      console.log('likes',user_likes[like],
+      gallery[images][user_likes[like]]["picture_attributes"][tag_list[tag]]
+      );
+    };
+
+    for (var dislike in user_dislikes) {
+      console.log('dislikes',user_dislikes[dislike],
+      gallery[images][user_dislikes[dislike]]["picture_attributes"][tag_list[tag]]
+      );
+    };
 
   }
 };
