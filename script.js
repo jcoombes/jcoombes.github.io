@@ -30,9 +30,8 @@ function times_liked(gallery, tag_list, user_likes, user_dislikes) {
               "tool","weapon","white","wood"]
 
   for (var tag in tag_list) {
-    if (object.hasOwnProperty(variable)) {
+    console.log(tag);
 
-    }
   }
 };
 
