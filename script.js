@@ -34,7 +34,7 @@ function main(gallery) {
 function times_liked(gallery, tag_list, user_likes, user_dislikes) {
 
   for (var tag in tag_list) {
-    console.log(tag);
+    console.log(tag_list[tag]);
 
   }
 };
