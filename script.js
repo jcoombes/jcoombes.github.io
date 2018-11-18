@@ -19,13 +19,14 @@ var getJSON = function(url, callback) {
     xhr.send();
 };
 
-getJSON('gallery2.json',  function(err, data) {
+looking = getJSON('gallery2.json',  function(err, data) {
 
     if (err != null) {
         console.error(err);
     } else {
 
-        console.log(data);
+        var gallery = data;
+        return data;
     }
 });
 
