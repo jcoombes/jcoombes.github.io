@@ -28,8 +28,9 @@ function main(gallery) {
 
   var user_dislikes = ["elephant statue"];
 
-  pref = times_liked(gallery, tag_list, user_likes, user_dislikes);
-  console.log(pref);
+  var pref = times_liked(gallery, tag_list, user_likes, user_dislikes);
+  var best_unseen = get_next_img(gallery, pref, user_likes, user_dislikes);
+  console.log(best_unseen);
 };
 
 function times_liked(gallery, tag_list, user_likes, user_dislikes) {
@@ -78,10 +79,24 @@ function times_liked(gallery, tag_list, user_likes, user_dislikes) {
     };
     };
   };
-    return user_prefs
+    return user_prefs;
 };
 
-function get_next_img() {
+function get_next_img(gallery, user_prefs,user_likes,user_dislikes) {
+  // takes user preferences as input and outputs the next image.
+  seen = user_likes.concat(user_dislikes); //assuming user can't like and dislike simultaneaously
+  for (var img in gallery[0]["images"]) {
+    if (seen.includes(img) === false) {
+      console.log('not seen', img);
+    }
+
+
+//    console.log("img: ", img);
+//    console.log("image: ", gallery[0]["images"][img]);
+
+  }
+
+  return seen;
 
 };
 
