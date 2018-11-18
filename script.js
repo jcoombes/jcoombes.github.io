@@ -60,20 +60,19 @@ function times_liked(gallery, tag_list, user_likes, user_dislikes) {
   }
 
   for (var tag in tag_list) {
-    console.log(tag_list[tag]);
 
     for (var like in user_likes) {
       if (
       gallery[0]["images"][user_likes[like]]["picture_attributes"][tag_list[tag]] === true
     );
-      user_prefs[tag_list[tag]]++
+      user_prefs[tag_list[tag]] = user_prefs[tag_list[tag]] + 1;
     };
 
     for (var dislike in user_dislikes) {
       if (
       gallery[0]["images"][user_dislikes[dislike]]["picture_attributes"][tag_list[tag]] === true
       );
-      user_prefs[tag_list[tag]]--
+        user_prefs[tag_list[tag]] = user_prefs[tag_list[tag]] - 1;
     };
   };
   console.log(user_prefs);
