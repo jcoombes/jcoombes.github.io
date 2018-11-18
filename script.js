@@ -19,7 +19,7 @@ var getJSON = function(url, callback) {
     xhr.send();
 };
 
-looking = getJSON('gallery2.json',  function(err, data) {
+var looking = getJSON('gallery2.json',  function(err, data) {
 
     if (err != null) {
         console.error(err);
