@@ -37,7 +37,7 @@ console.log(looking);
 
 var main = function (foo) {
   alert(foo);
-}
+};
 
 function times_liked() {
 
