@@ -1,5 +1,4 @@
-[{
-	"images": {
+{
 		"guitar": {
 			"url": "images/guitar.jpg",
 			"location": "Room 24",
@@ -145,4 +144,4 @@
 			}
 		}
 	}
-}]
+}

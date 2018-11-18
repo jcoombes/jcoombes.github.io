@@ -65,7 +65,7 @@ function times_liked(gallery, tag_list, user_likes, user_dislikes) {
 
     for (var like in user_likes) {
       if (
-        gallery[0]["images"][user_likes[like]]["picture_attributes"][tag_list[tag]] === "true"
+        gallery[user_likes[like]]["picture_attributes"][tag_list[tag]] === "true"
       ) {
       user_prefs[tag_list[tag]] = user_prefs[tag_list[tag]] + 1;
     };
@@ -73,7 +73,7 @@ function times_liked(gallery, tag_list, user_likes, user_dislikes) {
 
     for (var dislike in user_dislikes) {
       if (
-        gallery[0]["images"][user_dislikes[dislike]]["picture_attributes"][tag_list[tag]] === "true"
+        gallery[user_dislikes[dislike]]["picture_attributes"][tag_list[tag]] === "true"
       ) {
         user_prefs[tag_list[tag]] = user_prefs[tag_list[tag]] - 1;
     };
@@ -85,14 +85,14 @@ function times_liked(gallery, tag_list, user_likes, user_dislikes) {
 function get_next_img(gallery, user_prefs,user_likes,user_dislikes) {
   // takes user preferences as input and outputs the next image.
   seen = user_likes.concat(user_dislikes); //assuming user can't like and dislike simultaneaously
-  for (var img in gallery[0]["images"]) {
+  for (var img in gallery) {
     if (seen.includes(img) === false) {
-      console.log('not seen', img);
+
     }
 
 
 //    console.log("img: ", img);
-//    console.log("image: ", gallery[0]["images"][img]);
+//    console.log("image: ", gallery[img]);
 
   }
 
