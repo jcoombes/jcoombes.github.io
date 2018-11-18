@@ -26,6 +26,8 @@ var looking = getJSON('gallery2.json',  function(err, data) {
     } else {
 
         var gallery = data;
+        console.log('gallery: ',gallery);
+       console.log('data: ',data);
         return data;
     }
 });
