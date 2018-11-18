@@ -1,4 +1,4 @@
-var function getJSON(url, callback) {
+function getJSON(url, callback) {
 
     var xhr = new XMLHttpRequest();
     xhr.open('GET', url, true);
