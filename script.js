@@ -19,15 +19,19 @@ function getJSON(url, callback) {
 };
 
 function main(gallery) {
+  let tag_list = ["african","animal","asian","big","blue","brown",
+              "dead","european","face", "instrument","jar","leather",
+              "mouth","music","odd","shiny","statue","stone",
+              "tool","weapon","white","wood"];
+
+  let user_likes = ["african mask","doll head in jar"];
+
+  let user_dislikes = ["elephant statue"];
+
   times_liked(gallery, tag_list, user_likes, user_dislikes);
 };
 
 function times_liked(gallery, tag_list, user_likes, user_dislikes) {
-
-  tag_list = ["african","animal","asian","big","blue","brown",
-              "dead","european","face", "instrument","jar","leather",
-              "mouth","music","odd","shiny","statue","stone",
-              "tool","weapon","white","wood"]
 
   for (var tag in tag_list) {
     console.log(tag);
