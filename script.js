@@ -18,8 +18,8 @@ var function getJSON(url, callback) {
     xhr.send();
 };
 
-var function main(gallery) {
-  times_liked(gallery);
+function main(gallery) {
+  times_liked(gallery, tag_list, user_likes, user_dislikes);
 };
 
 function times_liked(gallery, tag_list, user_likes, user_dislikes) {
