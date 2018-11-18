@@ -24,9 +24,9 @@ function main(gallery) {
               "mouth","music","odd","shiny","statue","stone",
               "tool","weapon","white","wood"];
 
-  var user_likes = ["african mask","doll head in jar"];
+  var user_likes = ["african mask"];
 
-  var user_dislikes = ["elephant statue"];
+  var user_dislikes = [];
 
   var pref = times_liked(gallery, tag_list, user_likes, user_dislikes);
   var best_unseen = get_next_img(gallery, pref, user_likes, user_dislikes);
@@ -84,24 +84,48 @@ function times_liked(gallery, tag_list, user_likes, user_dislikes) {
 
 function get_next_img(gallery, user_prefs,user_likes,user_dislikes) {
   // takes user preferences as input and outputs the next image.
+  // returns the image with tags which were most liked by the user.
+
   seen = user_likes.concat(user_dislikes); //assuming user can't like and dislike simultaneaously
+  let best = "null";
+  let topscore = 0;
+
   for (var img in gallery) {
     if (seen.includes(img) === false) {
-      console.log("img",img);
-      console.log("image",gallery[img]);
+      let score = 0;
+      for (var att in gallery[img]["picture_attributes"]) {
+        score = score + user_prefs[att];
+      }
+      console.log(img,score);
 
+
+      if (score > topscore) {
+        topscore = score;
+        best = img;
+      }
     }
-
-
-//    console.log("img: ", img);
-//    console.log("image: ", gallery[img]);
-
   }
-
-  return seen;
+  return gallery[best];
 
 };
 
+function like(gallery,self, tag_list,user_likes,user_dislikes) {
+// self is string, name of what image the user just liked.
+// add img name to user_likes
+//call times_liked and get_next_img
+//return img
+ user_likes = user_likes.push(self)
+let prefs = times_liked(gallery, tag_list,user_likes,user_dislikes);
+let best_unseen = get_next_img(gallery, prefs, user_likes,user_dislikes);
+
+alert(best_unseen)
+return best_unseen, user_likes;
+};
+
+function dislike() {
+// add img name to user_dislikes
+alert('oh no');
+};
 
 getJSON('gallery2.json',  function(err, data, main) {
 
@@ -111,5 +135,5 @@ getJSON('gallery2.json',  function(err, data, main) {
         var gallery = data;
         // I have to put all my code inside this asynchronous block. :(
         main(gallery);
-    }
+    };
 });
