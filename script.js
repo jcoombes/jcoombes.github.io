@@ -63,18 +63,20 @@ function times_liked(gallery, tag_list, user_likes, user_dislikes) {
     console.log(tag_list[tag]);
 
     for (var like in user_likes) {
-      console.log("likes",user_likes[like],
-      gallery[0]["images"][user_likes[like]]["picture_attributes"][tag_list[tag]]
+      if (
+      gallery[0]["images"][user_likes[like]]["picture_attributes"][tag_list[tag]] === true;
       );
+      user_prefs[tag_list[tag]]++
     };
 
     for (var dislike in user_dislikes) {
-      console.log("dislikes",user_dislikes[dislike],
-      gallery[0]["images"][user_dislikes[dislike]]["picture_attributes"][tag_list[tag]]
+      if (
+      gallery[0]["images"][user_dislikes[dislike]]["picture_attributes"][tag_list[tag]] === true;
       );
+      user_prefs[tag_list[tag]]--
     };
-
-  }
+  };
+  console.log(user_prefs);
 };
 
 function get_next_img() {
