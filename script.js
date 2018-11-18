@@ -1,4 +1,4 @@
-var getJSON = function(url, callback) {
+var function getJSON(url, callback) {
 
     var xhr = new XMLHttpRequest();
     xhr.open('GET', url, true);
@@ -18,7 +18,30 @@ var getJSON = function(url, callback) {
     xhr.send();
 };
 
-var looking = getJSON('gallery2.json',  function(err, data, main) {
+var function main(gallery) {
+  times_liked(gallery);
+};
+
+function times_liked(gallery, tag_list, user_likes, user_dislikes) {
+
+  tag_list = ["african","animal","asian","big","blue","brown",
+              "dead","european","face", "instrument","jar","leather",
+              "mouth","music","odd","shiny","statue","stone",
+              "tool","weapon","white","wood"]
+
+  for (var tag in tag_list) {
+    if (object.hasOwnProperty(variable)) {
+
+    }
+  }
+};
+
+function get_next_img() {
+
+};
+
+
+getJSON('gallery2.json',  function(err, data, main) {
 
     if (err != null) {
         console.error(err);
@@ -27,23 +50,5 @@ var looking = getJSON('gallery2.json',  function(err, data, main) {
         var gallery = data;
         // I have to put all my code inside this asynchronous block. :(
         main(gallery);
-
-
     }
 });
-
-console.log(looking);
-
-
-var main = function (gallery) {
-  times_liked(gallery);
-};
-
-function times_liked(gallery) {
-  alert(2);
-
-};
-
-function get_next_img() {
-
-};

@@ -140,7 +140,8 @@
 				"african": "true",
 				"face": "true",
 				"shiny": "true",
-				"mouth": "true"
+				"mouth": "true",
+        "african": "true"
 			}
 		}
 	}
