@@ -63,13 +63,13 @@ function times_liked(gallery, tag_list, user_likes, user_dislikes) {
     console.log(tag_list[tag]);
 
     for (var like in user_likes) {
-      console.log('likes',user_likes[like],
+      console.log("likes",user_likes[like],
       gallery["images"][user_likes[like]]["picture_attributes"][tag_list[tag]]
       );
     };
 
     for (var dislike in user_dislikes) {
-      console.log('dislikes',user_dislikes[dislike],
+      console.log("dislikes",user_dislikes[dislike],
       gallery["images"][user_dislikes[dislike]]["picture_attributes"][tag_list[tag]]
       );
     };
