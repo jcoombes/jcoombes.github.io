@@ -10,7 +10,7 @@
 				"instrument": "true"
 			}
 		},
-		"walrus": {
+		"fat_walrus": {
 			"url": "images/fat_walrus.jpg",
 			"location": "Room 3",
 			"created": "1365",
