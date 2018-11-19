@@ -1,0 +1,145 @@
+{
+		"guitar": {
+			"url": "images/guitar.jpg",
+			"location": "Room 24",
+			"created": "2089",
+			"picture_attributes": {
+				"music": "true",
+				"brown": "true",
+				"shiny": "true",
+				"instrument": "true"
+			}
+		},
+		"walrus": {
+			"url": "images/fat_walrus.jpg",
+			"location": "Room 3",
+			"created": "1365",
+			"picture_attributes": {
+				"animal": "true",
+				"big": "true",
+				"brown": "true",
+				"leather": "true"
+			}
+		},
+		"mask": {
+			"url": "images/mask.jpg",
+			"location": "Room 14",
+			"created": "yesterday",
+			"picture_attributes": {
+				"wood": "true",
+				"mouth": "true",
+				"face": "true",
+				"odd": "true"
+			}
+		},
+		"statue with drum": {
+			"url": "images/statue_with_drum.jpg",
+			"location": "Room 86",
+			"created": "yes",
+			"picture_attributes": {
+				"instrument": "true",
+				"statue": "true",
+				"face": "true",
+				"blue": "true"
+			}
+		},
+		"swords": {
+			"url": "images/swords.jpg",
+			"location": "Room 12",
+			"created": "perhaps",
+			"picture_attributes": {
+				"weapon": "true",
+				"shiny": "true",
+				"wood": "true",
+				"tool": "true"
+			}
+		},
+		"cyclops": {
+			"url": "images/cyclops.jpg",
+			"location": "Room 8",
+			"created": "2003",
+			"picture_attributes": {
+				"odd": "true",
+				"weapon": "true",
+				"face": "true",
+				"big": "true"
+			}
+		},
+		"giant tuba": {
+			"url": "images/giant_tuba.jpg",
+			"location": "Room 32",
+			"created": "tomorrow",
+			"picture_attributes": {
+				"big": "true",
+				"instrument": "true",
+				"music": "true",
+				"european": "true"
+			}
+		},
+		"skull": {
+			"url": "images/skull.jpg",
+			"location": "Room 45",
+			"created": "12 BC",
+			"picture_attributes": {
+				"odd": "true",
+				"face": "true",
+				"dead": "true",
+				"white": "true"
+			}
+		},
+		"statue with tongue": {
+			"url": "images/statue_with_tongue.jpg",
+			"location": "Room 78",
+			"created": "in the past",
+			"picture_attributes": {
+				"statue": "true",
+				"african": "true",
+				"face": "true",
+				"brown": "true"
+			}
+		},
+		"skeleton chair": {
+			"url": "images/skeleton_chair.jpg",
+			"location": "Room 84",
+			"created": "4 AD",
+			"picture_attributes": {
+				"dead": "true",
+				"white": "true",
+				"tool": "true",
+				"odd": "true"
+			}
+		},
+		"elephant statue": {
+			"url": "images/elephant_statue.jpg",
+			"location": "Room 21",
+			"created": "1234",
+			"picture_attributes": {
+				"statue": "true",
+				"animal": "true",
+				"stone": "true",
+				"asian": "true"
+			}
+		},
+		"doll head in jar": {
+			"url": "images/doll_head_in_jar.jpg",
+			"location": "Room 37",
+			"created": "1556",
+			"picture_attributes": {
+				"odd": "true",
+				"jar": "true",
+				"shiny": "true",
+				"face": "true"
+			}
+		},
+		"african mask": {
+			"url": "images/african_mask.jpg",
+			"location": "Room 99",
+			"created": "ya",
+			"picture_attributes": {
+				"african": "true",
+				"face": "true",
+				"shiny": "true",
+				"mouth": "true"
+			}
+		}
+	}
