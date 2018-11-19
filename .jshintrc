@@ -1,0 +1,9 @@
+{
+    "browser": true,
+    "esversion": 6,
+    "globals": {
+        "console": true,
+        "JSONEditor": true,
+        "alert": true
+    }
+}

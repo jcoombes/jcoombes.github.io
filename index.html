@@ -7,7 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Horniman Tinder</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="script.js"></script>
+    <link rel="script" href="script.js" />
+    <script type="text/javascript" src="script.js">
+        main("gallery2.json");
+
+    </script>
 
 </head>
 
@@ -18,10 +22,17 @@
     </header>
     <main>
         This is the homepage for horniman tinder. Check back later for additional features.
-        <img src="images/fat_walrus.jpg" onclick="console.log(user_likes)">
-        <button name="dislike" width = 200 height = 200 onclick="dislike();"></button>
+        <section>
+            <button class="dislike" name="dislike" width=200 height=200 onclick="dislike();">Dislike</button>
+            <img src="images/chinese%20bells.jpg" id="picture" onclick="get_next_img(`gallery2.json`)" />
+            <script type="text/javascript" src="script.js">
+                get_next_img("gallery2.json");
+            </script>
+            <button class="like" name="like" width=200 height=200 onclick="get_next_img(`gallery2.json`)">Like</button>
+        </section>
     </main>
     <footer>
+        <script type="text/javascript" src="script.js"></script>
         <!-- <script src="script.js"></script> !-->
     </footer>
 </body>

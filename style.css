@@ -1,0 +1,20 @@
+section {
+    display: flex;
+    justify-content: space-around;
+}
+
+button {
+    background-color: transparent;
+    border: transparent;
+    float: left;
+    height: 100%
+}
+
+button.like {
+    float: right;
+}
+
+img {
+    height: 100%;
+    width: auto;
+}
