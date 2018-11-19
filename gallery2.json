@@ -32,7 +32,7 @@
 				"odd": "true"
 			}
 		},
-		"statue with drum": {
+		"statue_with_drum": {
 			"url": "images/statue_with_drum.jpg",
 			"location": "Room 86",
 			"created": "yes",
@@ -65,7 +65,7 @@
 				"big": "true"
 			}
 		},
-		"giant tuba": {
+		"giant_tuba": {
 			"url": "images/giant_tuba.jpg",
 			"location": "Room 32",
 			"created": "tomorrow",
@@ -87,7 +87,7 @@
 				"white": "true"
 			}
 		},
-		"statue with tongue": {
+		"statue_with_tongue": {
 			"url": "images/statue_with_tongue.jpg",
 			"location": "Room 78",
 			"created": "in the past",
@@ -98,7 +98,7 @@
 				"brown": "true"
 			}
 		},
-		"skeleton chair": {
+		"skeleton_chair": {
 			"url": "images/skeleton_chair.jpg",
 			"location": "Room 84",
 			"created": "4 AD",
@@ -109,7 +109,7 @@
 				"odd": "true"
 			}
 		},
-		"elephant statue": {
+		"elephant_statue": {
 			"url": "images/elephant_statue.jpg",
 			"location": "Room 21",
 			"created": "1234",
@@ -120,7 +120,7 @@
 				"asian": "true"
 			}
 		},
-		"doll head in jar": {
+		"doll_head_in_jar": {
 			"url": "images/doll_head_in_jar.jpg",
 			"location": "Room 37",
 			"created": "1556",
@@ -131,7 +131,7 @@
 				"face": "true"
 			}
 		},
-		"african mask": {
+		"african_mask": {
 			"url": "images/african_mask.jpg",
 			"location": "Room 99",
 			"created": "ya",
