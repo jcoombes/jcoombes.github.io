@@ -79,28 +79,33 @@ function times_liked(gallery, tag_list, user_likes, user_dislikes) {
 function get_next_img(gallery, user_prefs, user_likes, user_dislikes) {
     // takes user preferences as input and outputs the next image.
     // returns the image with tags which were most liked by the user.
-    let seen = user_likes;
+    let seen = user_likes.concat(user_dislikes);
     //let seen = user_likes.concat(user_dislikes); //assuming user can't like and dislike simultaneaously
     let best = "null";
     let topscore = 0;
-
+    let imgarray = [];
+    let scorearray = [];
+    let seen_everything = true;
     console.log("seen, ",seen);
 
     for (var img in gallery) {
         if (seen.includes(img) === false) {
+          seen_everything = false;
             let score = 0;
             for (var att in gallery[img]["picture_attributes"]) {
-                score = score + user_prefs[att];
+                score = score + user_prefs[att]; // note user_prefs[att] can be negative.
             }
-            //console.log(img, score);
-
-            if (score > topscore) {
-                topscore = score;
-                best = img;
+            console.log(img, score);
+            imgarray.push(img);
+            scorearray.push(score);
             }
         }
-    }
-    return [best, gallery[best]["url"]];
+    best = imgarray[indexOfMax(scorearray)];
+        
+    if (seen_everything) {
+      return [seen_everything];
+    };
+    return [seen_everything,best, gallery[best]["url"]];
 
 }
 
@@ -122,9 +127,16 @@ function like(gallery, self, tag_list, user_likes, user_dislikes) {
             let prefs = times_liked(gallery, tag_list, user_likes, user_dislikes);
             let best_unseen = get_next_img(gallery, prefs, user_likes, user_dislikes);
 
-            console.log(best_unseen);
-            document.getElementById('picture').name = best_unseen[0];
-            document.getElementById('picture').src = best_unseen[1];
+            //console.log(best_unseen);
+            if (!best_unseen[0]) {
+            document.getElementById('picture').name = best_unseen[1];
+            document.getElementById('picture').src = best_unseen[2];
+            }
+
+            else if (best_unseen[0]) {
+              document.getElementById('picture').name = "endscreen";
+              document.getElementById('picture').src = "images/endscreen.jpg";
+            }
             return best_unseen;
 
         }
@@ -132,9 +144,52 @@ function like(gallery, self, tag_list, user_likes, user_dislikes) {
 
     }
 
-function dislike() {
+function dislike(gallery, self, tag_list, user_likes, user_dislikes) {
     // add img name to user_dislikes
-    alert('oh no');
+    getJSON(gallery, function (err, data, main) {
+
+        if (err !== null) {
+            console.error(err);
+        } else {
+            var gallery = data;
+            // I have to put all my code inside this asynchronous block. :(
+            //user_likes = user_likes.push(self);
+            user_dislikes.push(document.getElementById("picture").name);
+            let prefs = times_liked(gallery, tag_list, user_likes, user_dislikes);
+            let best_unseen = get_next_img(gallery, prefs, user_likes, user_dislikes);
+
+            //console.log(best_unseen);
+            if (!best_unseen[0]) {
+            document.getElementById('picture').name = best_unseen[1];
+            document.getElementById('picture').src = best_unseen[2];
+            }
+
+            else if (best_unseen[0]) {
+              document.getElementById('picture').name = "endscreen";
+              document.getElementById('picture').src = "images/endscreen.jpg";
+            }
+            return best_unseen;
+
+        }
+    });
+}
+
+function indexOfMax(arr) {
+    if (arr.length === 0) {
+        return -1;
+    }
+
+    var max = arr[0];
+    var maxIndex = 0;
+
+    for (var i = 1; i < arr.length; i++) {
+        if (arr[i] > max) {
+            maxIndex = i;
+            max = arr[i];
+        }
+    }
+
+    return maxIndex;
 }
 
 var tag_list = ["african", "animal", "asian", "big", "blue", "brown",

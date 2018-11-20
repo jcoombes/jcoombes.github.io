@@ -23,12 +23,12 @@
     <main>
         This is the homepage for horniman tinder. Check back later for additional features.
         <section>
-            <button class="dislike" name="dislike" width=200 height=200 onclick="dislike();">Dislike</button>
+            <button class="dislike" name="dislike" width=200 height=200 onclick="dislike(`gallery2.json`,document.getElementById(`picture`).src, tag_list, user_likes, user_dislikes);">Dislike</button>
             <img src="images/doll_head_in_jar.jpg" id="picture" name="doll_head_in_jar" onclick="get_next_img(`gallery2.json`)" />
             <script type="text/javascript" src="script.js">
                 get_next_img("gallery2.json");
             </script>
-            <button class="like" name="like" width=200 height=200 onclick="like(`gallery2.json`,document.querySelector(`#picture`).src, tag_list, user_likes, user_dislikes);">Like</button>
+            <button class="like" name="like" width=200 height=200 onclick="like(`gallery2.json`,document.getElementById(`picture`).src, tag_list, user_likes, user_dislikes);">Like</button>
         </section>
     </main>
     <footer>
